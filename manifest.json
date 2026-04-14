@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Gemini Supercharged",
+    "version": "1.0.0",
+    "description": "Adds ChatGPT/Claude-style project folders to the Gemini sidebar and improved it's general workflow.",
+    "action": {
+        "default_title": "Gemini Supercharged"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "https://gemini.google.com/*"
+    ],
+    "content_scripts": [
+        {
+        "matches": ["https://gemini.google.com/*"],
+        "js": ["src/content.tsx"],
+        "run_at": "document_idle"
+        }
+    ]
+}
